@@ -1,0 +1,75 @@
+#tic-tac-toe-board {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .canvas-wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  
+  .canvas-wrapper-parent {
+    transform-style: preserver-3d;
+  }
+
+  .dimentions {
+    position: relative;
+    margin: auto;
+    width: 500px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    text-align:center;
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dimentions > div {
+    margin: 6px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-rows: 80% 10% 10%; 
+    grid-template-columns: auto;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .setbtn {
+    border-radius: 5px;
+    background-color: #f1be32;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .alert {
+    display: none;
+    /*padding: 20px;*/
+    background-color: #f44336;
+    color: white;
+    width: 500px;
+    position: relative;
+    margin: auto;
+    z-index: 999999;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+

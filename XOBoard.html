@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Tic-Tac-Toe Board</title>
+    <link rel="stylesheet" href="XOBoard.css">
+</head>
+<body >
+    
+  <div class="grid-container">
+    <div class="center-wrapper-parent">
+    
+        <div class="canvas-wrapper">
+          <!--canvas id="tic-tac-toe-board" class="center-v"></canvas-->
+          <canvas id="tic-tac-toe-board" ></canvas>
+        </div>
+    </div>
+      
+    <div class="dimentions">
+      <div><label>Dimentions (3-6):</label></div>
+      <div><input type="number" value="3" min="3" max="6" id="dimention" 
+           onkeyup="if(parseInt(this.value)>6 ){ this.value =6; return false; } 
+                    else if(parseInt(this.value)<3) { this.value =3; return false;} "></div>
+      <div><button onclick="setDimentions()" class="setbtn">Set</button></div>
+    </div>
+    <div class="alert" id="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <span id="msgDrawn" style="display: none;">This cell is already drawn. Choose another one.</span>
+      <span id="msgDimentions" style="display: none;">Please enter dimentions</span>
+    </div>
+  </div>
+    
+  <script src="XOBoard.js"></script>
+
+</body>
+</html>
+
